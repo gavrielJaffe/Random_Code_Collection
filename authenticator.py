@@ -20,7 +20,6 @@ def chack_authe(user):
 chack_authe(user1)
 
 # *******************************************************************************************8
-from time import time
 
 def timing(func):
     def wrapper_fun(*args, **kwars):
