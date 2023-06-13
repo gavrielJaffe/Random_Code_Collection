@@ -1,5 +1,11 @@
 
 def test_R_velo_ang_velo(R_ang_velo_velo):
+    """
+    The code defines a function test_R_velo_ang_velo to check if values of R, ang_velo, and velo meet certain conditions.
+    The main function initializes these values and calls test_R_velo_ang_velo with a tuple containing the values.
+    It then prints a message based on the result
+    
+    """
     R = R_ang_velo_velo[0]
     ang_velo = R_ang_velo_velo[1]
     velo = R_ang_velo_velo[2]
