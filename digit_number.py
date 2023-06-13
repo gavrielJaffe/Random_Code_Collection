@@ -24,7 +24,6 @@ def calculate_distance(lon1, lat1, lon2, lat2):
     distance = R * c * 1000  # convert to meters
     return distance
 
-
 def main():
     lat1 = 31.84773061844485
     lon1 = 34.68503878875027
@@ -35,9 +34,6 @@ def main():
     distance = distance_on_earth(lon1, lat1, lon2, lat2)
     # distance = calculate_distance(34.68503878875027, 31.84773061844485, 34.685039459302516, 31.847699286584252)
     print('distance', distance)
-
-
-
 
 if __name__ == '__main__':
     main()
