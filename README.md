@@ -8,3 +8,14 @@ Feel free to explore the folders and files to find scripts or codes that might b
 ## How to Use
 
 1. Clone the repository to your local machine using the following command:
+
+
+# Run the script folder_to_zip.sh in the folder dir:
+#    folder_to_zip.sh
+RUN :
+./folder_to_zip.sh /PATH/TO/OF_FOLDER_TO_ZIP/
+
+folder_to_zip.sh
+
+
+example : ./folder_to_zip.sh /home/mj/Desktop/test/
