@@ -37,7 +37,7 @@ print('n', n)
 
 
 
-
+# IV , for i in range of (romen) if the i is from the left side subtract , else add them up toughter . 
 
 
 
