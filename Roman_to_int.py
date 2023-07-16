@@ -1,8 +1,16 @@
 class Solution:
     def romanToInt(self, s: str) -> int:
-        pass
+        counter = 0 
+        romen_number = input("enter a Roman number")    
+        for i in romen_number:
+            if i == 'I':
+                counter += 1 
+            elif i == 'V'
 
 
+
+        return print('x', 10 )
+    
 
 our_solution = Solution()
 
