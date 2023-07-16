@@ -1,11 +1,28 @@
 class Solution:
     def romanToInt(self, s: str) -> int:
         counter = 0 
-        romen_number = input("enter a Roman number")    
+        romen_number = s    
         for i in romen_number:
+            print('i', i)
             if i == 'I':
                 counter += 1 
-            elif i == 'V'
+            elif i -1 == 'I':
+                pass
+            elif i == 'V':
+                counter += 5
+            elif i == 'X' : 
+                counter += 10 
+            elif i == 'L':
+                counter += 50 
+            elif i == 'C' :
+                counter += 100 
+            elif i == 'D' :
+                counter += 500 
+            elif i == 'M' :
+                counter += 1000
+        return counter 
+                
+
 
 
 
@@ -15,8 +32,8 @@ class Solution:
 our_solution = Solution()
 
 
-our_solution.romanToInt("x")
-
+n = our_solution.romanToInt("XI")
+print('n', n)
 
 
 
