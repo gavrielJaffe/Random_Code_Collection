@@ -2,7 +2,23 @@ class Solution:
     def romanToInt(self, s: str) -> int:
         int_list = get_int_list(s)
         print('int_list', int_list)
-        # Go over the list and convert
+
+        # Go over the list and convert to numbers . 
+        counter = 0 
+        for i in range(len(int_list)-1):
+            print('i', i)
+            print('int_list[i]', int_list[i])
+            if int_list[i] < int_list[i+1] :
+                counter += int_list[i+1] - int_list[i]
+            elif int_list[i] > int_list[i+1]:
+                counter += int_list[i+1] + int_list[i]
+                
+                print('counter', counter)
+                print(f'adding {int_list[i]} +{int_list[i+1]}')
+                
+
+        return counter
+
 
 def get_int_list(s):
     romen_number = []  
@@ -32,7 +48,7 @@ def get_int_list(s):
 our_solution = Solution()
 
 
-n = our_solution.romanToInt("IX")
+n = our_solution.romanToInt("XII")
 print('n', n)
 
 
