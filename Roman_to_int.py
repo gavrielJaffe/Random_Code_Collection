@@ -4,26 +4,19 @@ class Solution:
         print('int_list', int_list)
 
         # Go over the list and convert to numbers . 
-        counter = 0 
-        for i in range(len(int_list)-1):
-            print('i', i)
-            print('int_list[i]', int_list[i])
-            if int_list[i] < int_list[i+1] :
-                counter += int_list[i+1] - int_list[i]
-            elif int_list[i] > int_list[i+1]:
-                counter += int_list[i+1] + int_list[i]
-                
-                print('counter', counter)
-                print(f'adding {int_list[i]} +{int_list[i+1]}')
-                
-
+        counter = int_list[0]
+        temp_number = int_list[0]
+        int_list = my_list[1:]
+        # check if the index is smaller then the index -1 value,or bigger. 
+        for index in range(len(int_list)):
+            print('index values' ,int_list[index])
+            print('index' ,index)
+            
         return counter
-
 
 def get_int_list(s):
     romen_number = []  
     for i in s:
-        print('i', i)
         if i == 'I':
             romen_number.append(1) 
         elif i == 'V':
@@ -48,7 +41,7 @@ def get_int_list(s):
 our_solution = Solution()
 
 
-n = our_solution.romanToInt("XII")
+n = our_solution.romanToInt("XIV")
 print('n', n)
 
 
