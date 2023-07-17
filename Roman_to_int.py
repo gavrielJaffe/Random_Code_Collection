@@ -1,38 +1,38 @@
 class Solution:
     def romanToInt(self, s: str) -> int:
-        counter = 0 
-        romen_number = s    
-        for i in romen_number:
-            print('i', i)
-            if i == 'I':
-                counter += 1 
-            elif i -1 == 'I':
-                pass
-            elif i == 'V':
-                counter += 5
-            elif i == 'X' : 
-                counter += 10 
-            elif i == 'L':
-                counter += 50 
-            elif i == 'C' :
-                counter += 100 
-            elif i == 'D' :
-                counter += 500 
-            elif i == 'M' :
-                counter += 1000
-        return counter 
-                
+        int_list = get_int_list(s)
+        print('int_list', int_list)
+        # Go over the list and convert
 
+def get_int_list(s):
+    romen_number = []  
+    for i in s:
+        print('i', i)
+        if i == 'I':
+            romen_number.append(1) 
+        elif i == 'V':
+            romen_number.append(5)
+        elif i == 'X' : 
+            romen_number.append(10) 
+        elif i == 'L':
+            counter += 50 
+            romen_number.append(50) 
+        elif i == 'C' :
+            counter += 100 
+            romen_number.append(100) 
+        elif i == 'D' :
+            counter += 500 
+            romen_number.append(500) 
+        elif i == 'M' :
+            counter += 1000
+            romen_number.append(1000) 
 
-
-
-        return print('x', 10 )
-    
-
+    return romen_number
+        
 our_solution = Solution()
 
 
-n = our_solution.romanToInt("XI")
+n = our_solution.romanToInt("IX")
 print('n', n)
 
 
