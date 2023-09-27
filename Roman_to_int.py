@@ -6,7 +6,6 @@ class Solution:
         print('counter', counter)
 
         for i in range(len(romen_number)-1,0,-1):
-            print('i', i)
             if romen_number[i-1] < romen_number[i]:
                 counter  = counter - romen_number[i-1] 
             else:
@@ -40,11 +39,8 @@ def get_int_list(s):
     return romen_number
         
 our_solution = Solution()
-
 n = our_solution.romanToInt("LVIII")
 print('n', n)
-
-
 
 # IV , for i in range of (romen) if the i is from the left side subtract , else add them up toughter . 
 
