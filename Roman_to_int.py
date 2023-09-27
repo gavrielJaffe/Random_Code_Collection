@@ -1,21 +1,22 @@
 class Solution:
     def romanToInt(self, s: str) -> int:
-        int_list = get_int_list(s)
-        print('int_list', int_list)
+        romen_number = get_int_list(s)
+        print('romen_number', romen_number)
+        counter = romen_number[-1]
+        print('counter', counter)
 
-        # Go over the list and convert to numbers . 
-        counter = int_list[0]
-        temp_number = int_list[0]
-        int_list = my_list[1:]
-        # check if the index is smaller then the index -1 value,or bigger. 
-        for index in range(len(int_list)):
-            print('index values' ,int_list[index])
-            print('index' ,index)
+        for i in range(len(romen_number)-1,0,-1):
+            print('i', i)
+            if romen_number[i-1] < romen_number[i]:
+                counter  = counter - romen_number[i-1] 
+            else:
+                counter  = counter + romen_number[i-1]
             
         return counter
 
 def get_int_list(s):
     romen_number = []  
+    counter = 0
     for i in s:
         if i == 'I':
             romen_number.append(1) 
@@ -40,14 +41,12 @@ def get_int_list(s):
         
 our_solution = Solution()
 
-
-n = our_solution.romanToInt("XIV")
+n = our_solution.romanToInt("LVIII")
 print('n', n)
 
 
 
 # IV , for i in range of (romen) if the i is from the left side subtract , else add them up toughter . 
-
 
 
 # Symbol       Value
@@ -60,7 +59,7 @@ print('n', n)
 # M             1000
 # For example, 2 is written as II in Roman numeral, just two ones added together. 12 is written as XII, which is simply X + II. The number 27 is written as XXVII, which is XX + V + II.
 
-# Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:
+# Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not IIII. Instead, the number four is written as IV. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as IX. There are six instances where subtraction is used:1
 
 # I can be placed before V (5) and X (10) to make 4 and 9. 
 # X can be placed before L (50) and C (100) to make 40 and 90. 
@@ -92,3 +91,4 @@ print('n', n)
 # It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
 # https://leetcode.com/problems/roman-to-integer/?envType=featured-list&envId=top-interview-questions
+
