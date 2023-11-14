@@ -1,30 +1,38 @@
 from typing import List
 
 # strs = ["a"]
-strs = ["cir", "car"]
+strs = ["reflower","flow","flight"]
 
 def find_prefix(word_list: List, strs: List):
+    
     if len(strs) == 1:
         return strs[0]
 
-    common_prefix = ""
-    for i in range(min(len(word_list), len(strs[1]))):
-        if word_list[i] == strs[1][i]:
-            common_prefix += word_list[i]
-        else:
-            break
 
-    return common_prefix
+    prefix = []
+    for i in strs[1:]:
+        temp_prefix = [*i]
+        prefix = list(set(word_list) & set(temp_prefix))
+
+    return sorted(prefix)
 
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
-        if not strs:
+        word_list = [*strs[0]][:len(strs[0]) // 2]
+        print(word_list)
+        prefix = find_prefix(word_list, strs)
+
+        # Initialize an empty string
+        ans = ""
+
+        # Traverse in the string
+        for ele in prefix:
+            ans += ele
+
+        if prefix == []:
             return ""
 
-        word_list = list(strs[0])
-        common_prefix = find_prefix(word_list, strs)
-
-        return common_prefix
+        return ans
 
 # Example usage:
 sol = Solution()
