@@ -4,6 +4,7 @@ import time
 async def main():
     print('tim')
     task = asyncio.create_task(fow("randome things text"))
+    # If we would remove the await task ,It would run immediately but we will not get line 14. 
     await task
     print('finished')
 
