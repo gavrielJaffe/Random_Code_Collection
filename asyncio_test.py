@@ -10,7 +10,7 @@ async def main():
 
 async def fow(text):
     print(f'{text}')
-    await asyncio.sleep(1)
+    await asyncio.sleep(2)
     print('we wated for one sec of sleep')
     
 
