@@ -34,3 +34,5 @@ def main():
 
 if __name__=='__main__':
     main()
+# run by :
+     #  python3 pdf_numbers.py /home/jj/shlomo/
